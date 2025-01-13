@@ -130,10 +130,11 @@
   </div>
   <div class="t4s-shipping-message">
     {% if cart.total_price < free_shipping_threshold %}
-      Add {{ free_shipping_threshold | minus: cart.total_price | money }} to unlock free shipping on AeroPress branded products!
-      <span class="t4s-shipping-icon">🚛</span>
+      {% assign remaining = free_shipping_threshold | minus: cart.total_price | money %}
+      დაამატეთ {{ remaining }} AeroPress-ის პროდუქტებზე უფასო მიწოდების მისაღებად
+      <span class="t4s-shipping-icon">🚚</span>
     {% else %}
-      You've got FREE shipping! 
+      გილოცავთ! თქვენ მიიღეთ უფასო მიწოდება
       <span class="t4s-shipping-icon">🎉</span>
     {% endif %}
   </div>
