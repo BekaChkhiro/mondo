@@ -1,0 +1,158 @@
+/* comments-CUSTOM.css */
+.comments-section {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Desktop Styles */
+.comments-slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+}
+
+.comments-slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.3s ease;
+}
+
+.comment-slide {
+  min-width: calc((100% - 60px) / 3);
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  margin-bottom: 20px;
+}
+
+.star {
+  color: #FFD700;
+  font-size: 24px;
+  margin: 0 2px;
+}
+
+.comment-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.quote {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.author {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+.slider-arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slider-arrow:hover {
+  opacity: 0.7;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Mobile Styles */
+.mobile-slider {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .comments-section {
+    padding: 20px 0;
+  }
+  
+  .desktop-slider {
+    display: none;
+  }
+  
+  .mobile-slider {
+    display: block;
+    width: 100%;
+  }
+  
+  .swiper {
+    padding: 20px 0;
+  }
+  
+  .swiper-slide {
+    width: 100%;
+  }
+  
+  .comment-slide {
+    min-width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .comment-title {
+    font-size: 14px;
+  }
+  
+  .quote {
+    font-size: 13px;
+  }
+  
+  .author {
+    font-size: 13px;
+  }
+  
+  .star {
+    font-size: 20px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 374px) {
+  .comment-slide {
+    padding: 15px;
+  }
+  
+  .comment-title {
+    font-size: 13px;
+  }
+  
+  .quote {
+    font-size: 12px;
+  }
+  
+  .star {
+    font-size: 18px;
+  }
+}
